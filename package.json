@@ -1,0 +1,18 @@
+{
+  "name": "di-container",
+  "version": "1.0.0",
+  "description": "Experiments around DI and IoC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.qiwi.com:jslab/di-container.git"
+  },
+  "keywords": [
+    "di"
+  ],
+  "author": "Anton Golub <a.golub@qiwi.com> (http://antongolub.com)",
+  "license": "MIT"
+}
