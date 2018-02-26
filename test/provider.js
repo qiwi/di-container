@@ -40,7 +40,7 @@ describe('provider', () => {
         provider = new Provider()
       })
 
-      it ('throws error if target type is not specified', () => {
+      it('throws error if target type is not specified', () => {
         expect(provider.resolve).to.throw('Provider.resolve: type must be defined')
       })
 
