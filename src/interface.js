@@ -1,9 +1,21 @@
 // @flow
 
+export type IContainedEntity = any
+export type IContainedType = string
+export type IContainedDeps = Array<IContainedEntity>
+export interface IContainedOpts {
+  type: ?IContainedType,
+  deps: ?IContainedDeps;
+  lifecycle: ?string;
+  immutable: ?boolean;
+  alias: ?string;
+  aliases: ?string[];
+}
 export type IContainerOpts = {}
 export interface IContainer {
   constructor(opts: IContainerOpts): IContainer;
   opts: IContainerOpts;
+  register(entity: IContainedEntity, opts: ?IContainedOpts): IContainer;
 }
 
 export type IInstance = any

@@ -31,6 +31,11 @@ export default class Provider implements IProvider {
    * @returns {Provider}
    */
   register (type: IInstanceType, deps: IInstanceDepsTypes, factory: IInstanceFactory): IInstance {
+    if (this.getEntryByType(type)) {
+      const name = this.constructor.getTypeName(type)
+      throw new Error(`Provider.register: duplicate declaration ${name}`)
+    }
+
     const entry: IProviderEntry = {
       type,
       deps,

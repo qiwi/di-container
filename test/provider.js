@@ -31,6 +31,19 @@ describe('provider', () => {
           factory
         })
       })
+
+      it('prevents duplicate declaration', () => {
+        const provider = new Provider()
+
+        class Foo {
+        }
+
+        const factory = (Type, deps) => new Type(...deps)
+        provider.register(Foo, [], factory)
+
+        expect(() => provider.register(Foo, [], factory)).to.throw('Provider.register: duplicate declaration Foo')
+
+      })
     })
 
     describe('resolve', () => {

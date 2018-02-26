@@ -9,4 +9,31 @@ DI/IoC is nice and useful idea. There're several good JS implementations of this
 15. [di-decorators](https://github.com/lgvo/di-decorators) by Luis Gustavo Vilela de Oliveira  
 16. [js-ioc-container](https://github.com/andene/js-ioc-container) by Andreas Kihlberg  
 
- 
+But nothing is perfect.  
+So we need yet another one DI container absolutely incompatible with others.
+
+##### DI must be simple
+
+```javascript
+    class Bar {
+      baz() {return 'qux'}
+    }
+    class Foo {
+      constructor (bar) {
+        this.bar = bar
+      }
+    }
+
+    const container = new Container()
+    
+    container.register(Foo, {deps: [Bar], type: 'CLASS'})
+
+    const foo = container.get(Foo)
+    const qux = foo.bar.baz(); 
+```
+
+##### Research area
+1. Scopes
+2. Proxies
+3. Consistency
+4. Decorators
