@@ -1,5 +1,5 @@
 // @flow
 
-export function resolveFromArgs() {
+export function resolveFromArgs () {
 
 }

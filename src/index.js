@@ -2,8 +2,9 @@
 
 import Container from './container'
 
-export function createContainer() {}
+export function createContainer () {}
 
 export default {
-  createContainer
+  createContainer,
+  Container
 }

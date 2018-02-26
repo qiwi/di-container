@@ -21,6 +21,10 @@ coverage
 build
 dist
 
+#Docs
+docs
+doc
+
 # Deps
 node_modules/
 jspm_packages/
