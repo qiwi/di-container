@@ -1,0 +1,9 @@
+[include]
+./src/health
+./src/indicator
+
+[ignore]
+node_modules/.*
+
+[libs]
+./definitions/
