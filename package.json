@@ -65,7 +65,11 @@
     "globals": [
       "it",
       "expect",
-      "describe"
+      "describe",
+      "before",
+      "after",
+      "afterEach",
+      "beforeEach"
     ],
     "rules": {
       "use-flow-type": 1

@@ -10,9 +10,7 @@ import type {
  * @implements IContainer
  */
 export default class Container implements IContainer {
-
   opts: IContainerOpts
-
   /**
    * Constructs DI container.
    * @param {IContainerOpts} opts
@@ -26,6 +24,14 @@ export default class Container implements IContainer {
      */
     this.opts = opts
 
+    return this
+  }
+
+  /**
+   * Registers factories.
+   * @return {IContainer}
+   */
+  configure () {
     return this
   }
 }
