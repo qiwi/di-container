@@ -1,6 +1,6 @@
 {
   "name": "@qiwi/di-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Experiments around DI and IoC",
   "main": "dist/index.js",
   "@std/esm": {
@@ -16,7 +16,6 @@
     "test": "npm run flow_coverage && npm run lint && npm run mocha",
     "doc": "esdoc",
     "coveralls": "npm test && nyc report --reporter=text-lcov | coveralls",
-
     "minor": "npm test && npm run build && standard-version --release-as minor && npm run postversion",
     "major": "npm test && npm run build && standard-version --release-as major && npm run postversion",
     "release": "npm test && npm run build && standard-version && npm run postversion",
