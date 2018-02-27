@@ -1,6 +1,12 @@
 # di-container
 Experiments around DI and IoC
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![buildStatus](https://img.shields.io/travis/qiwi/di-container.svg?maxAge=1000&branch=master)](https://travis-ci.org/qiwi/di-container)
+[![Coveralls](https://img.shields.io/coveralls/qiwi/di-container.svg?maxAge=1000)](https://coveralls.io/github/qiwi/di-container)
+[![dependencyStatus](https://img.shields.io/david/qiwi/di-container.svg?maxAge=1000)](https://david-dm.org/qiwi/di-container)
+[![devDependencyStatus](https://img.shields.io/david/dev/qiwi/di-container.svg?maxAge=1000)](https://david-dm.org/qiwi/di-container)
+
 ##### Motivation
 DI/IoC is nice and useful idea. There're several good JS implementations of this concept:  
 1. [Inversify](https://github.com/inversify/InversifyJS)  
