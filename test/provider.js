@@ -42,7 +42,6 @@ describe('provider', () => {
         provider.register(Foo, [], factory)
 
         expect(() => provider.register(Foo, [], factory)).to.throw('Provider.register: duplicate declaration Foo')
-
       })
     })
 

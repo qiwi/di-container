@@ -38,3 +38,9 @@ export interface IProvider {
   resolve(type: IInstanceType): IInstance;
   getEntryByType(type: IInstanceType): ?IProviderEntry;
 }
+
+export type IFactory = {
+  (fn: IFactory): IFactory
+}
+
+export type IFactorySequence = Array<?IFactory>

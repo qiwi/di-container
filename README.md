@@ -15,6 +15,8 @@ So we need yet another one DI container absolutely incompatible with others.
 ##### DI must be simple
 
 ```javascript
+    import {Container, CLASS} from 'di-container'
+
     class Bar {
       baz() {return 'qux'}
     }
@@ -26,7 +28,8 @@ So we need yet another one DI container absolutely incompatible with others.
 
     const container = new Container()
     
-    container.register(Foo, {deps: [Bar], type: 'CLASS'})
+    container.register(Bar, {type: CLASS})
+    container.register(Foo, {deps: [Bar], type: CLASS})
 
     const foo = container.get(Foo)
     const qux = foo.bar.baz(); 
@@ -35,5 +38,6 @@ So we need yet another one DI container absolutely incompatible with others.
 ##### Research area
 1. Scopes
 2. Proxies
-3. Consistency
-4. Decorators
+3. Aliases
+4. Lazy consistency check
+5. Decorators

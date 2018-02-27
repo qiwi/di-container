@@ -3,20 +3,24 @@ import Provider from './provider'
 import {
   REFERENCE,
   FACTORY,
-  INSTANCE,
-  asFactory,
-  asInstance,
-  asReference
+  CONSTRUCTOR,
+  getResolver
 } from './resolver'
+
+import {
+  immutable as immutableInterceptor,
+  singleton as singletonInterceptor
+} from './interceptors'
+import {composeFactories} from './util'
 
 import type {
   IContainerOpts,
   IContainer,
 
-  IContainedType,
   IContainedEntity,
   IContainedOpts,
-  IProvider, IInstance
+  IProvider,
+  IInstance
 } from './interface'
 
 /**
@@ -48,9 +52,14 @@ export default class Container implements IContainer {
    * @return {IContainer}
    */
   register (entity: IContainedEntity, opts: ?IContainedOpts): IContainer {
-    const {type, deps, singleton=false, immutable=false} = {...this.opts, ...opts}
-    const resolver = this.constructor.getResolver(type)
+    const { type, deps, singleton = false, immutable = false } = {...this.opts, ...opts}
+    const resolver = composeFactories(
+      getResolver(type),
+      immutable ? immutableInterceptor : null,
+      singleton ? singletonInterceptor : null
+    )
 
+    // $FlowFixMe
     this.provider.register(entity, deps || [], resolver)
 
     return this
@@ -64,21 +73,13 @@ export default class Container implements IContainer {
   get (track: IContainedEntity): IInstance {
     return this.provider.resolve(track)
   }
+}
 
-  /**
-   *
-   * @param type
-   * @returns {Function}
-   */
-  static getResolver(type: ?IContainedType) {
-    switch (type) {
-      case FACTORY:
-        return asFactory
-      case INSTANCE:
-        return asInstance
-      case REFERENCE:
-      default:
-        return asReference
-    }
-  }
+export {
+  REFERENCE,
+  FACTORY,
+  CONSTRUCTOR,
+  REFERENCE as VALUE,
+  FACTORY as FUNCTION,
+  CONSTRUCTOR as CLASS
 }

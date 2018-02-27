@@ -1,10 +1,30 @@
 // @flow
 
-import Container from './container'
+import Container, {
+  REFERENCE,
+  FACTORY,
+  CONSTRUCTOR,
+  VALUE,
+  FUNCTION,
+  CLASS
+} from './container'
 
-export function createContainer () {}
+export {
+  Container,
+  REFERENCE,
+  FACTORY,
+  CONSTRUCTOR,
+  VALUE,
+  FUNCTION,
+  CLASS
+}
 
 export default {
-  createContainer,
-  Container
+  Container,
+  REFERENCE,
+  FACTORY,
+  CONSTRUCTOR,
+  VALUE,
+  FUNCTION,
+  CLASS
 }
