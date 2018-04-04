@@ -1,6 +1,6 @@
 {
   "name": "@qiwi/di-container",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Experiments around DI and IoC",
   "main": "dist/index.js",
   "@std/esm": {
