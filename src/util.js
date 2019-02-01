@@ -1,6 +1,6 @@
 // @flow
 
-import type {IFactorySequence, IFactory} from './interface'
+import type { IFactorySequence, IFactory } from './interface'
 
 /**
  * Produces composed handler from factories

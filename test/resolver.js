@@ -10,7 +10,7 @@ import {
   asReference
 } from '../src/resolver'
 
-const {expect} = chai
+const { expect } = chai
 chai.use(dirtyChai)
 
 describe('resolver', () => {

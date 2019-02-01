@@ -11,7 +11,7 @@ import {
   immutable as immutableInterceptor,
   singleton as singletonInterceptor
 } from './interceptors'
-import {composeFactories} from './util'
+import { composeFactories } from './util'
 
 import type {
   IContainerOpts,
@@ -52,7 +52,7 @@ export default class Container implements IContainer {
    * @return {IContainer}
    */
   register (entity: IContainedEntity, opts: ?IContainedOpts): IContainer {
-    const { type, deps, singleton = false, immutable = false } = {...this.opts, ...opts}
+    const { type, deps, singleton = false, immutable = false } = { ...this.opts, ...opts }
     const resolver = composeFactories(
       getResolver(type),
       immutable ? immutableInterceptor : null,

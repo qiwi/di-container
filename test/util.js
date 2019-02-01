@@ -2,7 +2,7 @@ import chai from 'chai'
 import dirtyChai from 'dirty-chai'
 import { composeFactories } from '../src/util'
 
-const {expect} = chai
+const { expect } = chai
 chai.use(dirtyChai)
 
 describe('composeFactories', () => {
@@ -19,7 +19,7 @@ describe('composeFactories', () => {
 
       return res
     }
-    const baz = () => ({baz: 'baz'})
+    const baz = () => ({ baz: 'baz' })
     const qux = null
     const composed = composeFactories(qux, baz, qux, bar, qux, foo)
     const value = composed()

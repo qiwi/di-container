@@ -2,7 +2,7 @@ import chai from 'chai'
 import dirtyChai from 'dirty-chai'
 import { singleton, immutable } from '../src/interceptors'
 
-const {expect} = chai
+const { expect } = chai
 chai.use(dirtyChai)
 
 describe('singleton', () => {

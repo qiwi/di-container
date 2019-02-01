@@ -11,7 +11,7 @@
     "flow": "flow",
     "flow_coverage": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90",
     "build": "babel src --out-dir dist",
-    "lint": "standard src/**/*.js test/**/*.js",
+    "lint": "standard src/**/*.js test/**/*.js --fix",
     "mocha": "mocha --opts .mocha.opts report",
     "nyc": "nyc --reporter=lcov npm run mocha",
     "test": "npm run flow_coverage && npm run lint && npm run nyc",

@@ -2,7 +2,7 @@ import chai from 'chai'
 import dirtyChai from 'dirty-chai'
 import Provider from '../src/provider'
 
-const {expect} = chai
+const { expect } = chai
 chai.use(dirtyChai)
 
 describe('provider', () => {

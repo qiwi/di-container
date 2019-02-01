@@ -1,9 +1,9 @@
 import chai from 'chai'
 import dirtyChai from 'dirty-chai'
-import Container, {CLASS, FACTORY, REFERENCE, CONSTRUCTOR} from '../src/container'
+import Container, { CLASS, FACTORY, REFERENCE, CONSTRUCTOR } from '../src/container'
 import Provider from '../src/provider'
 
-const {expect} = chai
+const { expect } = chai
 chai.use(dirtyChai)
 
 describe('container', () => {
@@ -99,9 +99,9 @@ describe('container', () => {
 
         container.register(ref, { type: REFERENCE })
         container.register(factory, { type: FACTORY })
-        container.register(Bar, {type: CLASS, singleton: true})
-        container.register(Foo, {deps: [Bar], type: CLASS})
-        container.register(Qux, {deps: [factory, ref, Bar, Foo], type: CONSTRUCTOR})
+        container.register(Bar, { type: CLASS, singleton: true })
+        container.register(Foo, { deps: [Bar], type: CLASS })
+        container.register(Qux, { deps: [factory, ref, Bar, Foo], type: CONSTRUCTOR })
 
         const qux = container.get(Qux)
 

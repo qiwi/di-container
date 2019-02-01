@@ -1,6 +1,6 @@
 // @flow
 
-import type {IFactory} from './interface'
+import type { IFactory } from './interface'
 
 export function singleton (resolver: IFactory): IFactory {
   const memo = {}
