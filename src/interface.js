@@ -10,6 +10,7 @@ export interface IContainedOpts {
   immutable: ?boolean;
   alias: ?string;
   aliases: ?string[];
+  singleton: ?boolean;
 }
 export type IContainerOpts = {}
 export interface IContainer {
