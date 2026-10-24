@@ -1354,7 +1354,7 @@ babel-types@^6.10.2, babel-types@^6.24.1, babel-types@^6.26.0, babel-types@^6.9.
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
 
-babylon@6.18.0, babylon@^6.15.0, babylon@^6.18.0, babylon@^6.7.0:
+babylon@6.18.0, babylon@^6.18.0, babylon@^6.7.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   integrity sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==
@@ -3338,12 +3338,32 @@ flow-coverage-report@^0.6.1:
     terminal-table "0.0.12"
     yargs "8.0.1"
 
-flow-remove-types@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-1.2.3.tgz#6131aefc7da43364bb8b479758c9dec7735d1a18"
-  integrity sha512-ypq/U3V+t9atYiOuSJd40tekCra03EHKoRsiK/wXGrsZimuum0kdwVY7Yv0HTaoXgHW1WiayomYd+Q3kkvPl9Q==
+flow-enums-runtime@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/flow-enums-runtime/-/flow-enums-runtime-0.0.6.tgz#5bb0cd1b0a3e471330f4d109039b7eba5cb3e787"
+  integrity sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==
+
+flow-estree@0.337.0:
+  version "0.337.0"
+  resolved "https://registry.yarnpkg.com/flow-estree/-/flow-estree-0.337.0.tgz#b26f12aaf5ebdfdedba82c5829bc613852e8c677"
+  integrity sha512-8u9x/Ur45zWAdlD8SKHq3MnMttR6MB0x2xna3mNlwfs8BSJ0rCH/1Cyrfvq7eSq61ppshRHZbmQhOp870WmAOA==
+
+flow-parser@^0.337.0:
+  version "0.337.0"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.337.0.tgz#387c0a25b0465903b464cb250afb2e5b8c56804f"
+  integrity sha512-jGsqT5qJ6J/7gD870pKgL7K8x8l6IzUvtBlRX+OdLP4EGrpDF+3sUqF8HpyR/YcAJs2mVMVhW2GZsxmtXc+aIw==
   dependencies:
-    babylon "^6.15.0"
+    flow-estree "0.337.0"
+
+flow-remove-types@^2.0.0:
+  version "2.337.0"
+  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-2.337.0.tgz#05032e4dd72a1e57ac238e2f51dc999a99e5cc00"
+  integrity sha512-ZVfPLnPZdDSjV0VwWxEfoZFzMqJv7j9J7WbAfrkKicQto/YtKiqvZCzyuYRX9bg5mKvNseftCbkzstfG4li87g==
+  dependencies:
+    flow-enums-runtime "^0.0.6"
+    flow-parser "^0.337.0"
+    pirates "^3.0.2"
+    source-map-support "^0.5.21"
     vlq "^0.2.1"
 
 flush-write-stream@^1.0.0:
@@ -6154,6 +6174,13 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
+pirates@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/pirates/-/pirates-3.0.2.tgz#7e6f85413fd9161ab4e12b539b06010d85954bb9"
+  integrity sha512-c5CgUJq6H2k6MJz72Ak1F5sN9n9wlSlJyEnwvpm9/y3WB4E3pHBDT2c6PEiS1vyJvq2bUxUAIu0EGf8Cx4Ic7Q==
+  dependencies:
+    node-modules-regexp "^1.0.0"
+
 pirates@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.0.tgz#850b18781b4ac6ec58a43c9ed9ec5fe6796addbd"
@@ -7103,6 +7130,14 @@ source-map-support@^0.4.15:
   integrity sha512-try0/JqxPLF9nOjvSta7tVondkP5dwgyLDjVoyMDlmjugT2lRZ1OfsrYTkCd2hkDnJTKRbO/Rl3orm8vlsUzbA==
   dependencies:
     source-map "^0.5.6"
+
+source-map-support@^0.5.21:
+  version "0.5.21"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
+  integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
+  dependencies:
+    buffer-from "^1.0.0"
+    source-map "^0.6.0"
 
 source-map-support@^0.5.9:
   version "0.5.10"
