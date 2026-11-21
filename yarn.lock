@@ -3313,10 +3313,10 @@ flow-annotation-check@1.8.1:
     glob "7.1.1"
     load-pkg "^3.0.1"
 
-flow-bin@^0.92.0:
-  version "0.92.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.92.0.tgz#f5bf3e808b17b480e067ac673829ca715a168bea"
-  integrity sha512-3ErXSAXZZlLV5/QPlaUDCWlDUXop1SiH32ifXL3SEiBwsmGbudCLim+HFVZfkegrn1nB4TcNSkMWtW8SnMPyAQ==
+flow-bin@^0.342.0:
+  version "0.342.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.342.0.tgz#de211291165039f8cc83355575b75a931bd09793"
+  integrity sha512-/ha9+RAUGF+G9o5hnBzpKCP5iZXzms0tMVi1Dp4zNvPfWo3dUF6qE8S0Q2zJMugX3f5DPqE4h3BaFSpWYQjhUA==
 
 flow-coverage-report@^0.6.1:
   version "0.6.1"
